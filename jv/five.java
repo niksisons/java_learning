@@ -7,7 +7,7 @@ public class five
     {
         try(Scanner sc = new Scanner(System.in))
         {
-            int a = sc.nextInt(), b = sc.nextInt();
+            int a = sc.nextInt();//, b = sc.nextInt();
             if (a != 0)
                 System.out.println(1);
             else
