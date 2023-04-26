@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Guessing Game</string>
+    <string name="label_1">Введите число от 1 до 100:</string>
+    <string name="label_2">Нажмите на кнопку чтобы начать играть</string>
+    <string name="Button">Guesse</string>
+    <string name="label_2.1">Нужное число больше</string>
+    <string name="label_2.2">Нужное число меньше</string>
+    <string name="Text">Number</string>
+    <string name="PlayAgain">Play Again</string>
+</resources>
