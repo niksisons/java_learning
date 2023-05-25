@@ -1,38 +1,34 @@
 package com.example.game2048;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.widget.Button;
-import android.widget.ImageButton;
-
 public class MainActivity extends AppCompatActivity {
-    private Button Play;
-    private ImageButton exit;
+    private Button BPlay;
+    private ImageView Settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        binding = ActivityMainBinding.inflate(getLayoutInflater());
-//        setContentView(binding.getRoot());
-//
-//        binding.fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAnchorView(R.id.fab)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-        Play = findViewById(R.id.button);
-        Play.setOnClickListener(v -> {
-            setContentView(R.layout.wind_game);
-            exit = findViewById(R.id.imageButton2);
+        BPlay = findViewById(R.id.button);
+        Settings = findViewById(R.id.imageView2);
+        BPlay.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, Play.class);
+            startActivity(intent);
         });
-
+        Settings.setOnClickListener(v ->
+        {
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
     }
-
-
 }
