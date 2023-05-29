@@ -4,7 +4,9 @@ package com.example.game2048;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 
@@ -16,6 +18,7 @@ import java.util.List;
 
 public class Play extends AppCompatActivity {
     ImageView backButton;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +31,47 @@ public class Play extends AppCompatActivity {
             intent.setClass(Play.this, MainActivity.class);
             startActivity(intent);
         });
+
+        GridView gridView = findViewById(R.id.table);
+        List<Integer> cells = new ArrayList<>(); // Здесь вам нужно заполнить список cells данными для игрового поля
+        GridAdapter adapter = new GridAdapter(this, cells);
+        gridView.setAdapter(adapter);
     }
+
+    private static final int TILE_SIZE = 64;
+    private static final int TILES_MARGIN = 16;
+
+    private ArrayAdapter[][] myTiles;
+    boolean myWin = false;
+    boolean myLose = false;
+    int myScore = 0;
+
+    for(int i = 0; myTiles)
+
 }
-//    private static final int TILE_SIZE = 64;
-//    private static final int TILES_MARGIN = 16;
-//
-//    private Tile[] myTiles;
-//    boolean myWin = false;
-//    boolean myLose = false;
-//    int myScore = 0;
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    public Play() {
 //                if (!canMove()) {
 //                    myLose = true;
